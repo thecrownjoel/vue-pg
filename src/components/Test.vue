@@ -5,6 +5,10 @@
    <br>
    <input />
    <button v:onclick="">Add Name</button>
+   <span v-bind:title="message">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
   </div>
 </template>
 
@@ -14,6 +18,9 @@ export default {
   props: {
     h3tag: String,
     firstname: String,
+  },
+  data: {
+    message: 'You loaded this page on ' + new Date().toLocaleString()
   }
 }
 </script>
